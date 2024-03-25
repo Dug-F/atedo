@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import handler from "@/functions/instagramFetch";
-
+import handler from "@/functions/instagramRefresh";
+"use client "
 
 interface Media {
   id: string;

@@ -1,4 +1,4 @@
-"use client";
+
 
 import { NextApiRequest, NextApiResponse } from "next";
 
