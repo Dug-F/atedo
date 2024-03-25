@@ -4,6 +4,7 @@ import Showreels from "@/components/Showreels/Showreels";
 import Navbar from "@/components/navbar/Navbar";
 import TopBannerVideo from "@/components/TopBannerVideo/TopBannerVideo";
 import ClientLogos from "@/components/ClientCard/ClientCard";
+import Instagram from "@/components/InstagramFeed/instagram";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <Showreels />
         <div className="h-20"></div>
         <HireUs />
+        <div className="h-20"></div>
+        <Instagram />
         <div className="h-20"></div>
         <ClientLogos />
         <div className="h-20"></div>
