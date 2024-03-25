@@ -4,8 +4,10 @@ import Links from "./links/Links";
 import { gsap } from "@/components/gsap/gsap";
 import { useEffect } from "react";
 import toggleDarkMode from "@/functions/toggleDarkMode";
+import { useTheme } from "@/Contexts/ThemeContext";
 
-const Navbar = async () => {
+const Navbar = () => {
+  const { toggleTheme } = useTheme();
 
   useEffect(() => {
     const element = document.querySelector("body");
@@ -17,8 +19,14 @@ const Navbar = async () => {
         end: "bottom center",
         scrub: true,
         // markers: true, // For debugging
-        onEnter: () => toggleDarkMode(),
-        onLeaveBack: () => toggleDarkMode(),
+        onEnter: () => {
+          toggleDarkMode();
+          toggleTheme();
+        },
+        onLeaveBack: () => {
+          toggleDarkMode();
+          toggleTheme();
+        },
       },
     });
 
@@ -30,7 +38,6 @@ const Navbar = async () => {
       tl.kill();
     };
   }, []);
-
 
   return (
     // <div className="flex justify-end absolute h-[30px] w-full pt-4 pr-4">

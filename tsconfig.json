@@ -36,7 +36,7 @@
     "src/components/TopBannerVideo/TopBannerVideo.tsx",
     "src/components/HireUs/HireUs.tsx",
     "src/components/MissionStatement/MissionStatement.tsx"
-  ],
+, "src/components/navbar/links/ToggleThemeButton.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -14,7 +14,7 @@ const cardData: CardData[] = [
 
 const Showreels: React.FC = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div id="showreels" className="container mx-auto px-4">
       <ScrollIntoView>
         <h2>SOME OF OUR WORK</h2>
         <div className="flex justify-center w-[80%] mx-auto">

@@ -1,10 +1,5 @@
-"use client";
-
-import { useState } from "react";
 import NavLink from "./navLink/NavLink";
-import Image from "next/image";
-import toggleDarkMode from "@/functions/toggleDarkMode";
-import isDarkMode from "@/functions/isDarkMode";
+import ToggleThemeButton from "./ToggleThemeButton";
 
 const links = [
   {
@@ -18,15 +13,6 @@ const links = [
 ];
 
 const Links = ({ session }) => {
-  const [open, setOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleMode = () => {
-    setDarkMode((prev) => !prev);
-    setOpen((prev) => !prev);
-    toggleDarkMode();
-  };
-
   // const menuImage = isDarkMode() ? "/menu_dark.png" : "/menu_light.png";
 
   return (
@@ -36,9 +22,7 @@ const Links = ({ session }) => {
           <NavLink item={link} key={link.title}></NavLink>
         ))}
       </div>
-      <button className="" onClick={toggleMode}>
-        {darkMode ? "Dark" : "Light"}
-      </button>
+      <ToggleThemeButton />
     </div>
     // <div>
     //   <Image className="absolute right-0 mr-4" src={menuImage} alt="menu" width={30} height={30} onClick={() => setOpen((prev) => !prev)} />

@@ -1,10 +1,13 @@
 import Navbar from "@/components/navbar/Navbar";
+import { ThemeProvider } from "@/Contexts/ThemeContext";
 
 const GalleryPage = () => {
   return (
     <>
-      <Navbar />
-      <div className="mt-3">Gallery</div>
+      <ThemeProvider>
+        <Navbar />
+        <div className="mt-3 h-screen">Gallery</div>
+      </ThemeProvider>
     </>
   );
 };
